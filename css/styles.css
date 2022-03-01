@@ -47,10 +47,20 @@ nav {
 
 header nav {
     /* add CSS here */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    position: absolute;
+    top:81px;
+    left:0;
+
+    background-color:rgba(255, 255, 255, 0.95);
+    width: 100vw;
 }
 
 .show-nav {
     /* add CSS here */
+    max-height: 18.75rem;
 }
 
 /* ************ section ************ */
@@ -81,9 +91,17 @@ section h2 {
     .toggle-btn {
         display: none;
     }
+    header{
+        flex-flow: nowrap;
+        flex: 0 1 auto;
+    }
 
     header nav {
         /* add CSS here */
+        max-height: unset;
+        flex: 0 1 auto;
+        position: static;
+        width: auto;
     }
 
     ul.menu {
